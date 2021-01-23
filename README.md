@@ -4,13 +4,14 @@ Requirements: Python3
 ***NOTE***: If using visual studio code, install the sqllite extension to see the tables from the database. Then, enter 
            ctr + shift + p (windows). A search bar will appear, enter 'sqllite', then 'open database' and finally select 'dfs' database
 
-***IMPORTANT NOTE***: 1. when copyToDFS a file, the program checks for all the data nodes in the database and then checks for the 
-                      current ports that are running. Those ports that are running will be used to store our chunks. Example: I want
-                      to copy to our DFS the file 'prueba.txt'. I check for the available data nodes in our database and we get 6 servers, but only 3 are running. The 3 servers that are running will be stored to save the chunks of our files, not the 6 servers
+***IMPORTANT NOTES***:
+ 1. when copyToDFS a file, the program checks for all the data nodes in the database and then checks for the 
+    current ports that are running. Those ports that are running will be used to store our chunks. Example: I want
+    to copy to our DFS the file 'prueba.txt'. I check for the available data nodes in our database and we get 6 servers, but only 3 are running. The 3 servers that are running will be stored to save the chunks of our files, not the 6 servers
 
-                      2. when copyFromDFS a file, you need to be running the servers where the chunks were stored. Example: I want 
-                      to get a copy of the file named 'prueba.txt' stored in our DFS. Let's say this file was stored in 3 servers, 
-                      the server with nid 1, 2 and 4. The servers with nid 1, 2 and 4 should be running in order to get our copy of the file. 
+2. when copyFromDFS a file, you need to be running the servers where the chunks were stored. Example: I want 
+   to get a copy of the file named 'prueba.txt' stored in our DFS. Let's say this file was stored in 3 servers, 
+   the server with nid 1, 2 and 4. The servers with nid 1, 2 and 4 should be running in order to get our copy of the file. 
 
 ***OTHER IMPORTANT NOTE***: for more info about the program, go to README2.md
 
